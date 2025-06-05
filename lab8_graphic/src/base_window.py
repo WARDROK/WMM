@@ -1,4 +1,5 @@
 from pathlib import Path
+from pyrr import Vector3
 
 import moderngl
 from moderngl_window import WindowConfig
@@ -26,7 +27,7 @@ class BaseWindow(WindowConfig):
         self.quad_2d = models.load_quad_2D(self.program)
 
     def init_shaders_variables(self):
-        pass
+        self.uniform_color = self.program["color"]
 
     @classmethod
     def add_arguments(cls, parser):
@@ -35,5 +36,10 @@ class BaseWindow(WindowConfig):
                             help='Name of the shader to look for in the shader_path directory')
 
     def render(self, time: float, frame_time: float):
-        self.ctx.clear(0.1, 0.2, 0.3, 0.0)
+        self.ctx.clear(0.1, 0.2, 0.3, 0.0)  # Clear the screen with a color
+
+        px_color = Vector3([0.0, 0.0, 0.0], dtype='f')  # Set the color to red
+
+        self.uniform_color.write(px_color)  # Set the uniform color variable in the shader
+
         self.quad_2d.render(moderngl.TRIANGLES)
