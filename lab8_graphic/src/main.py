@@ -50,5 +50,5 @@ class TaskType(Enum):
 
 
 if __name__ == '__main__':
-    task = TaskType.DEFAULT
+    task = TaskType.ROBOT
     moderngl_window.run_window_config(task.window_cls, args=task.window_args)
