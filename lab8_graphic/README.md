@@ -31,12 +31,6 @@ Camera position = (5.0, 15.0, -15.0)\
 Light position = (0.0, 7.0, -15.0)\
 material_shininess = 10
 
-![zadanie2_1](images/zadanie2_3.png)
-
-Camera position = (5.0, 15.0, -15.0)\
-Light position = (0.0, 0.0, -15.0)\
-material_shininess = 10
-
 ![zadanie2_1](images/zadanie2_4.png)
 
 Camera position = (5.0, 10.0, 15.0)\
@@ -44,3 +38,8 @@ Light position = (0.0, 10.0, -15.0)\
 material_shininess = 10
 
 ![zadanie2_1](images/zadanie2_5.png)
+
+
+## Zadanie 3
+
+![zadanie3](images/zadanie3.png)
